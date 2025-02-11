@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html
+  lang="en"
+  th:replace="~{base :: parent(~{::#content},~{::title},~{::script})}"
+>
+  <head>
+    <title data-th-text="${loggedInUser.name}+' |  Dashboard'"> 
+      Profile Page
+    </title>
+  </head>
+  <body>
+    <div id="content">
+      <!-- sidebar -->
+
+      <!-- user is logged in : sidebar -->
+      <div th:if="${loggedInUser}">
+        <div data-th-replace="~{user/sidebar :: sidebar}"></div>
+      </div>
+
+      <div class="sm:pl-64 pt-20" style="height: 1000px">
+        <div class="flex justify-center flex-col items-center">
+          <h1 class="text-5xl">Welcome to Dashboard page</h1>
+        </div>
+
+        <!-- Summary Cards Section -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-10">
+          <div class="p-6 bg-white rounded shadow">
+            <h3 class="text-xl font-semibold">Total Contacts</h3>
+            <p class="text-3xl font-bold">12</p>
+          </div>
+          <div class="p-6 bg-white rounded shadow">
+            <h3 class="text-xl font-semibold">Recent Activities</h3>
+            <p class="text-3xl font-bold">5</p>
+          </div>
+          <div class="p-6 bg-white rounded shadow">
+            <h3 class="text-xl font-semibold">Pending Tasks</h3>
+            <p class="text-3xl font-bold">3</p>
+          </div>
+        </div>
+
+        <!-- Recent Contacts Section -->
+        <div class="bg-white p-6 rounded shadow mt-10">
+          <h2 class="text-3xl font-bold mb-4">Recent Contacts</h2>
+          <table class="min-w-full">
+            <thead>
+              <tr class="bg-gray-200 text-gray-600">
+                <th class="py-2">Name</th>
+                <th class="py-2">Email</th>
+                <th class="py-2">Phone</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="border-b">
+                <td class="py-2">Saurav</td>
+                <td class="py-2">saurav@gmail.com</td>
+                <td class="py-2">7050773387</td>
+              </tr>
+              <tr class="border-b">
+                <td class="py-2">Raunak </td>
+                <td class="py-2">raunak@gmail.com</td>
+                <td class="py-2">9905731223</td>
+              </tr>
+              <tr class="border-b">
+                <td class="py-2">Prince </td>
+                <td class="py-2">prince@gmail.com</td>
+                <td class="py-2">9504731223</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Quick Actions Section -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-10">
+          <div class="p-6 bg-blue-600 text-white rounded shadow text-center">
+            <h3 class="text-xl font-semibold mb-2">Add New Contact</h3>
+            <a href="/user/contacts/add" class="text-white hover:underline">Click Here</a>
+          </div>
+          <div class="p-6 bg-green-600 text-white rounded shadow text-center">
+            <h3 class="text-xl font-semibold mb-2">View All Contacts</h3>
+            <a href="/user/contacts" class="text-white hover:underline">Click Here</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      console.log("this is profile page");
+    </script>
+  </body>
+</html>

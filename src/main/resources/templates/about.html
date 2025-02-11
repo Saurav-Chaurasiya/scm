@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html
+  lang="en"
+  th:replace="~{base :: parent(~{::#content},~{::title},~{::script})}"
+>
+<head>
+  <title>About Page</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+<div id="content" class="border">
+  <!-- Banner Section -->
+  <section class="bg-blue-600 text-white py-20 animate__animated animate__fadeInDown">
+    <div class="container mx-auto text-center">
+      <h2 class="text-4xl font-bold mb-4">About Us</h2>
+      <p class="text-lg mb-8">Learn more about our mission, vision, and values.</p>
+    </div>
+  </section>
+
+  <!-- Our Mission Section -->
+  <section class="py-20 bg-white">
+    <div class="container mx-auto text-center">
+      <h2 class="text-3xl font-bold mb-12 animate__animated animate__fadeInUp">Our Mission</h2>
+      <p class="text-lg text-gray-600 mb-8">
+        Our mission is to provide an easy and secure way for users to manage their contacts, making their lives easier and more organized.
+      </p>
+    </div>
+  </section>
+
+  <!-- Our Vision Section -->
+  <section class="py-20 bg-gray-100">
+    <div class="container mx-auto text-center">
+      <h2 class="text-3xl font-bold mb-12 animate__animated animate__fadeInUp">Our Vision</h2>
+      <p class="text-lg text-gray-600 mb-8">
+        We envision a world where managing contacts is seamless and effortless, leveraging technology to enhance personal and professional relationships.
+      </p>
+    </div>
+  </section>
+
+  <!-- Our Values Section -->
+  <section class="py-20 bg-white">
+    <div class="container mx-auto text-center">
+      <h2 class="text-3xl font-bold mb-12 animate__animated animate__fadeInUp">Our Values</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="p-6 bg-gray-100 rounded shadow hover:shadow-lg transition duration-300 transform hover:scale-105">
+          <i class="fas fa-user-shield text-blue-600 text-4xl mb-4"></i>
+          <h3 class="text-xl font-semibold mb-2">Integrity</h3>
+          <p class="text-gray-600">We prioritize honesty and transparency in all our interactions.</p>
+        </div>
+        <div class="p-6 bg-gray-100 rounded shadow hover:shadow-lg transition duration-300 transform hover:scale-105">
+          <i class="fas fa-lock text-blue-600 text-4xl mb-4"></i>
+          <h3 class="text-xl font-semibold mb-2">Security</h3>
+          <p class="text-gray-600">We are committed to keeping your data safe and secure.</p>
+        </div>
+        <div class="p-6 bg-gray-100 rounded shadow hover:shadow-lg transition duration-300 transform hover:scale-105">
+          <i class="fas fa-comments text-blue-600 text-4xl mb-4"></i>
+          <h3 class="text-xl font-semibold mb-2">Community</h3>
+          <p class="text-gray-600">We believe in the power of community and collaboration.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="py-20 bg-gray-100 animate__animated animate__fadeInUp">
+    <div class="container mx-auto text-center">
+      <h2 class="text-3xl font-bold mb-12">Get in Touch</h2>
+      <form class="max-w-lg mx-auto">
+        <input type="text" placeholder="Your Name" class="w-full px-4 py-2 mb-4 border border-gray-300 rounded">
+        <input type="email" placeholder="Your Email" class="w-full px-4 py-2 mb-4 border border-gray-300 rounded">
+        <textarea placeholder="Your Message" class="w-full px-4 py-2 mb-4 border border-gray-300 rounded"></textarea>
+        <button type="submit" class="bg-blue-600 text-white px-6 py-3 rounded font-semibold hover:bg-blue-700 transition duration-300">
+          Send Message
+        </button>
+      </form>
+    </div>
+  </section>
+  
+
+  <!-- Footer Section -->
+  <footer class="bg-gray-800 text-white py-8">
+    <div class="container mx-auto text-center">
+      <p>&copy; 2024 Contact Manager. All rights reserved.</p>
+      <p>Follow us on <a href="#" class="text-blue-400">Facebook</a>, <a href="#" class="text-blue-400">Twitter</a>, and <a href="#" class="text-blue-400">Instagram</a>.</p>
+    </div>
+  </footer>
+</div>
+<script>
+  console.log("about page");
+</script>
+</body>
+</html>
